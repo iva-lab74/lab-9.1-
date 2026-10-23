@@ -1,15 +1,14 @@
-import type{AlertBoxProps, AlertType} from "../../types/index"
+import type{AlertBoxProps} from "../../types/index"
+//make the alert message popup and show a message
 
-//export multiple
-//export default one thing
-
-export function AlertType(props: AlertBoxProps) {
+export default function AlertBox(props: AlertBoxProps) {
     return(
-        <div>
-            {props.type}
-            {props.message}
-            {props.onClose}
-            {props.children}
+        <div className={`alert alert-${props.type}`} role="alert">
+            <p>{props.message}</p>
+            {props.onClose && (
+            <button onClick={props.onClose}>x</button> 
+            )}
+            {props.children}  //show everything else as well
         </div>
     )
 }

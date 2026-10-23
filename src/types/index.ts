@@ -1,20 +1,14 @@
-// types/index.ts
-export type AlertType = 'success' | 'error' | 'warning' | 'info';
- 
-export interface AlertBoxProps {
-  type: AlertType;
-  message: string;
-  onClose?: () => void;
-  children?: React.ReactNode;
-}
+import React from "react";
 
-// types/index.ts
+/*UserProfileCard Component*/
+
 export interface User {
   id: string;
   name: string;
   email: string;
   role: string;
   avatarUrl?: string;
+  
 }
  
 export interface UserProfileCardProps {
@@ -25,7 +19,18 @@ export interface UserProfileCardProps {
   children?: React.ReactNode;
 }
 
-// types/index.ts
+/*Alert Box Component */
+
+export type AlertType = 'success' | 'error' | 'warning' | 'info';
+ 
+export interface AlertBoxProps {
+  type: AlertType;
+  message: string;
+  onClose?: () => void;
+  children?: React.ReactNode;
+}
+
+/*Product Display Component*/
 export interface Product {
   id: string;
   name: string;
